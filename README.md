@@ -8,5 +8,8 @@ Kopioi ympäristömuuttujatiedosto:
 Asenna riippuvuudet:
 <code>uv sync</code>
 
+Siirry virtuaaliympäristöön:
+<code>source .venv/bin/activate</code>
+
 Käynnistä sovellus:
-<code>uv run python src/index.py</code>
+<code>python3 src/index.py</code>

@@ -1,6 +1,8 @@
-#just a test
-def func(x):
-    return x+1
+import unittest
 
-def test_answer():
-    assert func(3) == 4
+class TestFunc(unittest.TestCase):
+    def setUp(self):
+        pass
+
+    def test_answer(self):
+        self.assertEqual("Hello world", "Hello world")

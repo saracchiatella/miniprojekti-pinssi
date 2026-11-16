@@ -5,7 +5,7 @@ Library  Browser
 ${SERVER}     localhost:5001
 ${DELAY}      500ms
 ${HOME_URL}   http://${SERVER}
-${RESET_URL}  http://${SERVER}/reset_db
+${ADDREFERENCE_URL}  http://${SERVER}/add_reference
 ${BROWSER}    chromium
 ${HEADLESS}   false
 
@@ -18,6 +18,3 @@ Open And Configure Browser
     END
     New Context
     New Page  about:blank
-
-Reset Todos
-    Go To  ${RESET_URL}

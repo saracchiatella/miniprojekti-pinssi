@@ -1,5 +1,8 @@
-CREATE TABLE viitteet (
+CREATE TABLE book (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  content TEXT NOT NULL,
-  done BOOLEAN DEFAULT FALSE
+  author TEXT,
+  title TEXT,
+  publisher TEXT,
+  address TEXT,
+  year INTEGER
 )

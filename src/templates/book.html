@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Lisää uusi kirjaviite</title>
+</head>
+
+<body>
+<h2>Lisää uusi kirjaviite</h2>
+<form action="{{  url_for('book')  }}" method="post">
+
+    <p>
+        <label for="author">Tekijä:</label>
+        <input type="text" name="author" id="author" maxlength="100" required>
+    </p>
+
+    <p>
+        <label for="editor">Toimittaja:</label>
+        <input type="text" name="editor" id="editor" maxlength="100">
+    </p>
+
+    <p>
+        <label for="title">Kirjan nimi:</label>
+        <input type="text" name="title" id="title" maxlength="100" required>
+    </p>
+
+    <p>
+        <label for="publisher">Julkaisija:</label>
+        <input type="text" name="publisher" id="publisher" maxlength="100" required>
+    </p>
+
+    <p>
+        <label for="year">Julkaisuvuosi:</label> 
+        <input type="text" name="year" id="year" required>
+    </p>
+
+    <p>
+        <label for="volume">Volume:</label>
+        <input type="text" name="volume" id="volume" maxlength="100">
+    </p>
+
+    <p>
+        <label for="number">Numero:</label> 
+        <input type="text" name="number" id="number">
+    </p>
+
+    <p>
+        <label for="pages">Sivut:</label>
+        <input type="text" name="pages" id="pages" maxlength="100">
+    </p>
+
+    <p>
+        <label for="month">Kuukausi:</label> 
+        <input type="text" name="month" id="month" >
+    </p>
+
+    <p>
+        <label for="note">Lisätiedot:</label> <br />
+        <textarea name="note" id="note" rows="6" cols="50" maxlength="1000"></textarea>
+    </p>
+
+    <p>
+        <label for="doi">DOI:</label> 
+        <input type="text" name="doi" id="doi" maxlength="100">
+    </p>
+
+    <p>
+        <label for="issn">ISSN:</label> 
+        <input type="text" name="issn" id="issn">
+    </p>
+
+    <p>
+        <label for="isbn">ISBN:</label> 
+        <input type="text" name="isbn" id="isbn" >
+    </p>
+
+    <input type="submit" value="Lisää viite">
+
+</form>
+
+<p>
+    <a href="{{  url_for('references')  }}">Takaisin viitelistaan</a>
+</p>
+
+</body>
+</html>

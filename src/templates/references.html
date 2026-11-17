@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tallennetut viitteet</title>
+</head>
+
+<body>
+
+    <h2>Tallennetut viitteet</h2>
+
+    <p>Täällä voit tarkastella tallennettuja viitteitä.</p>
+
+    {% if references %}
+    
+        {% for reference in references %}
+            <div>
+                <h3>{{ reference.title }}</h3>
+                <p>Tekijä: {{ reference.author }}</p>
+                <p>Toimittaja: {{ reference.editor }}</p>
+                <p>Julkaisija: {{ reference.publisher }}</p>
+                <p>Julkaisuvuosi: {{ reference.year }}</p>
+                <p>Volume: {{ reference.volume }}</p>
+                <p>Numero: {{ reference.number }}</p>
+                <p>Sivut: {{ reference.pages }}</p>
+                <p>Kuukausi: {{ reference.month }}</p>
+                <p>Lisätiedot: {{ reference.note }}</p>
+                <p>DOI: {{ reference.doi }}</p>
+                <p>ISSN: {{ reference.issn }}</p>
+                <p>ISBN: {{ reference.isbn }}</p>
+                
+            </div>
+        {% endfor %}
+    
+    {% else %}
+
+        <p>Viitteitä ei ole vielä lisätty.</p>
+    
+    {% endif %}
+
+    <p>
+        <a href="{{ url_for('add_reference') }}">Lisää uusi viite</a>
+    </p>
+
+
+
+</body>
+
+</html>

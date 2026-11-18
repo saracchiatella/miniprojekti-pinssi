@@ -1,4 +1,4 @@
-](# miniprojekti-PINSSI
+miniprojekti-PINSSI
 
 Näin saat sovelluksen toimimaan:
 
@@ -17,3 +17,5 @@ Käynnistä sovellus:
 [Linkki pelisääntöihin](https://github.com/saracchiatella/miniprojekti-pinssi/blob/main/pelisaannot.md)
 
 [Linkki backlogeihin](https://github.com/users/saracchiatella/projects/1)
+
+[Linkki sovellukseen](https://route-ohjelmistotuotanto-lahiopetus-2026-20.ext.okd-cs-test-0.k8s.cs.helsinki.fi/)

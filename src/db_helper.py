@@ -3,8 +3,8 @@ from sqlalchemy import text
 import os
 
 def reset_db():
-  print(f"Clearing contents from table todos")
-  sql = text(f"DELETE FROM todos")
+  print(f"Clearing contents from table book")
+  sql = text(f"DELETE FROM book")
   db.session.execute(sql)
   db.session.commit()
 

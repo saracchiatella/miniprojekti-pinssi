@@ -10,7 +10,7 @@
 <form action="{{  url_for('book')  }}" method="post">
 
     <p>
-        <label for="author">Tekijä:</label>
+        <label for="author">Tekijä:*</label>
         <input type="text" name="author" id="author" maxlength="100" required>
     </p>
 
@@ -20,17 +20,17 @@
     </p>
 
     <p>
-        <label for="title">Kirjan nimi:</label>
+        <label for="title">Kirjan nimi:*</label>
         <input type="text" name="title" id="title" maxlength="100" required>
     </p>
 
     <p>
-        <label for="publisher">Julkaisija:</label>
+        <label for="publisher">Julkaisija:*</label>
         <input type="text" name="publisher" id="publisher" maxlength="100" required>
     </p>
 
     <p>
-        <label for="year">Julkaisuvuosi:</label> 
+        <label for="year">Julkaisuvuosi:*</label> 
         <input type="text" name="year" id="year" required>
     </p>
 
@@ -80,9 +80,13 @@
 
 </form>
 
-<p>
-    <a href="{{  url_for('references')  }}">Takaisin viitelistaan</a>
-</p>
+<br><br>
+
+<form action="{{ url_for('add_reference') }}">
+    <button type="submit">
+        Takaisin
+    </button>
+</form>
 
 </body>
 </html>

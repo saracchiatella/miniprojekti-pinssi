@@ -11,7 +11,7 @@ Can move from home page to add reference page
 
 Can add a book referenve
 	Go To  ${ADDREFERENCE_URL}
-	Click  text=Book
+	Click  text=Kirjaviite
 	Get Title  ==  Lisää uusi kirjaviite
 	Fill Text  input[name="author"]  Maija Meikäläinen
 	Fill Text  input[name="editor"]  Matti Meikäläinen

@@ -7,15 +7,26 @@
 
 <body>
 
-    <h2> Lisää uusi viite </h2>
+<h2> Lisää uusi viite </h2>
 
-    <p> Valitse haluamasi viitetyyppi alla olevista linkeistä ja siirry lisäämään viitteen tiedot. </p>
+<p> Valitse haluamasi viitetyyppi alla olevista linkeistä ja siirry lisäämään viitteen tiedot. </p>
 
-    <h3> Viitetyypit: </h3>
+<h3> Viitetyypit: </h3>
 
-    <p> book </p>
-    <p> ... </p>
-    <p> ... </p>
+<form action="{{ url_for('book') }}">
+<button type="submit">
+    Kirjaviite
+</button>
+</form>
+
+<hr />
+
+<form action="{{ url_for('index') }}">
+    <button type="submit">
+        Takaisin etusivulle
+    </button>
+</form>
+
 
 </body>
 

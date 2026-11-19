@@ -5,6 +5,7 @@
   <li>Jos olet estynyt tekemään osuuttasi tai osallistumaan ryhmän tapaamiseen, ilmoita siitä mahdollisimman pian ryhmälle</li>
   <li>Ilmoita ryhmälle myös, jos myöhästyt pahasti tapaamisesta</li>
   <li>Noudata Scrumin pelisääntöjä ja muista psykologinen turvallisuus</li>
+  <li> Muista aina ennen projektin muokkaamista suorittaa git pull, jotta voidaan vähentää mahdollisia merge-konflikteja. </li>
 </p>
 <p>
   <h2>User storyn Definition of Done:</h2><br>

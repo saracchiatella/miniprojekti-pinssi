@@ -14,7 +14,7 @@ Siirry virtuaaliympäristöön:
 Käynnistä sovellus:
 <code>python3 src/index.py</code>
 
-[Linkki pelisääntöihin](https://github.com/saracchiatella/miniprojekti-pinssi/blob/main/pelisaannot.md)
+[Linkki pelisääntöihin sekä Definition of done -määrittelyyn](https://github.com/saracchiatella/miniprojekti-pinssi/blob/main/pelisaannot.md)
 
 [Linkki backlogeihin](https://github.com/users/saracchiatella/projects/1)
 

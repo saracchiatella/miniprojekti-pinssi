@@ -1,7 +1,5 @@
 # miniprojekti-PINSSI
 
-miniprojekti-PINSSI
-
 Näin saat sovelluksen toimimaan:
 <br>
 <p>

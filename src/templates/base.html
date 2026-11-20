@@ -1,0 +1,28 @@
+<! doctype html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="/static/base.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>{{ title }}</title>
+
+</head>
+
+<body >
+    <nav>
+        <a class="head-link" href="{{ url_for('index') }}">Etusivu</a> &nbsp;
+        <a class="head-link" href="{{ url_for('references') }}">Kaikki lähdeviitteet</a> &nbsp;
+        <a class="head-link" href="{{ url_for('add_reference') }}">Uusi lähdeviite</a> &nbsp;
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+
+</html>
+

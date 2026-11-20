@@ -35,12 +35,12 @@ def book():
         cites.add_book(book_data)
 
         return redirect("/references")
-    return render_template("book.html")
+    return render_template("book.html", title="book")
 
 @app.route("/references")
 def references():
     references = cites.get_references()
-    return render_template("references.html", references=references)
+    return render_template("references.html", references=references, title="references")
 
 #tämä reitti on testausta varten :)
 if test_env:

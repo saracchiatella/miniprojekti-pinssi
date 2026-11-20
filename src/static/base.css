@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background-color: LightBlue;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    min-height: 100dvh;
+    flex-direction: column;
+}
+
+.head-link {
+    color: black;
+    font-size: 1.2rem;
+}

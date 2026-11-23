@@ -37,6 +37,57 @@ def book():
         return redirect("/references")
     return render_template("book.html", title="book")
 
+@app.route("/article", methods=["GET", "POST"])
+def article():
+    if request.method == "POST":
+        article_data = {
+            "author": request.form.get("author"),
+            "title": request.form.get("title"),
+            "journal": request.form.get("journal"),
+            "year": request.form.get("year"),
+            "volume": request.form.get("volume"),
+            "number": request.form.get("number"),
+            "pages": request.form.get("pages"),
+            "month": request.form.get("month"),
+            "note": request.form.get("note"),
+            "doi": request.form.get("doi"),
+            "issn": request.form.get("issn"),
+            "zblnumber": request.form.get("zblnumber"),
+            "eprint": request.form.get("eprint"),
+        }
+
+        cites.add_article(article_data)
+
+        return redirect("/references")
+    return render_template("article.html", title="article")
+
+@app.route("/inproceedings", methods=["GET", "POST"])
+def inproceedings():
+    if request.method == "POST":
+        inproceedings_data = {
+            "author": request.form.get("author"),
+            "title": request.form.get("title"),
+            "booktitle": request.form.get("booktitle"),
+            "year": request.form.get("year"),
+            "editor": request.form.get("editor"),
+            "volume": request.form.get("volume"),
+            "number": request.form.get("number"),
+            "series": request.form.get("series"),
+            "pages": request.form.get("pages"),
+            "month": request.form.get("month"),
+            "address": request.form.get("address"),
+            "organization": request.form.get("organization"),
+            "publisher": request.form.get("publisher"),
+            "note": request.form.get("note"),
+            "annote": request.form.get("annote"),
+        }
+
+        cites.add_inproceedings(inproceedings_data)
+
+        return redirect("/references")
+    return render_template("inproceedings.html", title="inproceedings")
+
+
 @app.route("/references")
 def references():
     references = cites.get_references()

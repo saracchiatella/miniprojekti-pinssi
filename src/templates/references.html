@@ -1,51 +1,36 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <title>Tallennetut viitteet</title>
-</head>
+{% block content %}
 
-<body>
+<h2>Tallennetut viitteet</h2>
 
-    <h2>Tallennetut viitteet</h2>
+<p>Täällä voit tarkastella tallennettuja viitteitä.</p>
 
-    <p>Täällä voit tarkastella tallennettuja viitteitä.</p>
+{% if references %}
 
-    {% if references %}
+    {% for reference in references %}
+        <div>
+            <h3>{{ reference.title }}</h3>
+            <p>Tekijä: {{ reference.author }}</p>
+            <p>Toimittaja: {{ reference.editor }}</p>
+            <p>Julkaisija: {{ reference.publisher }}</p>
+            <p>Julkaisuvuosi: {{ reference.year }}</p>
+            <p>Volume: {{ reference.volume }}</p>
+            <p>Numero: {{ reference.number }}</p>
+            <p>Sivut: {{ reference.pages }}</p>
+            <p>Kuukausi: {{ reference.month }}</p>
+            <p>Lisätiedot: {{ reference.note }}</p>
+            <p>DOI: {{ reference.doi }}</p>
+            <p>ISSN: {{ reference.issn }}</p>
+            <p>ISBN: {{ reference.isbn }}</p>
 
-        {% for reference in references %}
-            <div>
-                <h3>{{ reference.title }}</h3>
-                <p>Tekijä: {{ reference.author }}</p>
-                <p>Toimittaja: {{ reference.editor }}</p>
-                <p>Julkaisija: {{ reference.publisher }}</p>
-                <p>Julkaisuvuosi: {{ reference.year }}</p>
-                <p>Volume: {{ reference.volume }}</p>
-                <p>Numero: {{ reference.number }}</p>
-                <p>Sivut: {{ reference.pages }}</p>
-                <p>Kuukausi: {{ reference.month }}</p>
-                <p>Lisätiedot: {{ reference.note }}</p>
-                <p>DOI: {{ reference.doi }}</p>
-                <p>ISSN: {{ reference.issn }}</p>
-                <p>ISBN: {{ reference.isbn }}</p>
-                
-            </div>
-        {% endfor %}
-    
-    {% else %}
+        </div>
+    {% endfor %}
 
-        <p>Viitteitä ei ole vielä lisätty.</p>
-    
-    {% endif %}
+{% else %}
 
-    <form action="{{ url_for('add_reference') }}">
-        <button type="submit">
-            Lisää uusi viite
-        </button>
-    </form>
+    <p>Viitteitä ei ole vielä lisätty.</p>
 
+{% endif %}
 
-
-</body>
-
-</html>
+{% endblock %}

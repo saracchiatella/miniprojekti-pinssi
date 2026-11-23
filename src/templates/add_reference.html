@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <title> Lisää uusi viite</title>
-</head>
-
-<body>
+{% block content %}
 
 <h2> Lisää uusi viite </h2>
 
@@ -19,15 +14,4 @@
 </button>
 </form>
 
-<hr />
-
-<form action="{{ url_for('index') }}">
-    <button type="submit">
-        Takaisin etusivulle
-    </button>
-</form>
-
-
-</body>
-
-</html>
+{% endblock %}

@@ -34,7 +34,7 @@ CREATE TABLE article (
 
 );
 
-CREATE TABLE inproceeding (
+CREATE TABLE inproceedings (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   author TEXT,
   title TEXT,

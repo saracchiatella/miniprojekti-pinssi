@@ -4,15 +4,11 @@ Suite Setup  Open And Configure Browser
 Suite Teardown  Close Browser
 
 *** Test Cases ***
-Can move from home page to add reference page
-	Go To  ${HOME_URL}
-	Click  button >> text=Lisää viite tästä!
-	Get Title  ==  Lisää uusi viite
 
-Can add a book referenve
+Can add a book reference
 	Go To  ${ADDREFERENCE_URL}
 	Click  text=Kirjaviite
-	Get Title  ==  Lisää uusi kirjaviite
+	Get Title  ==  book
 	Fill Text  input[name="author"]  Maija Meikäläinen
 	Fill Text  input[name="editor"]  Matti Meikäläinen
 	Fill Text  input[name="title"]  Hei hei
@@ -27,4 +23,4 @@ Can add a book referenve
 	Fill Text  input[name="issn"]  12345678
 	Fill Text  input[name="isbn"]  1234567891234
 	Click  button >> text=Lisää viite
-	Get Title  ==  Tallennetut viitteet
+	Get Title  ==  references

@@ -9,7 +9,7 @@
 {% if references %}
 
     {% for reference in references %}
-        <div>
+        <div class=reference_box>
             <h3>{{ reference.title }}</h3>
             <p>Tekijä: {{ reference.author }}</p>
             <p>Toimittaja: {{ reference.editor }}</p>
@@ -23,7 +23,6 @@
             <p>DOI: {{ reference.doi }}</p>
             <p>ISSN: {{ reference.issn }}</p>
             <p>ISBN: {{ reference.isbn }}</p>
-
         </div>
     {% endfor %}
 

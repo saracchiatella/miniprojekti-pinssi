@@ -18,3 +18,10 @@ main {
 .nav-pad {
     padding-left: 20px;
 }
+
+.reference_box {
+    margin-top: 10px;
+    display: inline; /* the default for span */
+    padding: 5px;
+    border: 2px solid black;
+}

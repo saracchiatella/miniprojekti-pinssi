@@ -26,11 +26,12 @@ Can add a book reference
 	Get Title  ==  references
 
 Can Add An Article Reference
+	Go To  ${ADDREFERENCE_URL}
 	Click  text=Artikkeli
 	Get Title  ==  article
 	Fill Text  input[name="author"]  Maija Meikäläinen
 	Fill Text  input[name="title"]  Hei hei
-	Fill Text  input[name="journal"] Asiallinen Lehti
+	Fill Text  input[name="journal"]  Asiallinen Lehti
 	Fill Text  input[name="year"]  2142
 	Fill Text  input[name="volume"]  42
 	Fill Text  input[name="number"]  999
@@ -45,11 +46,12 @@ Can Add An Article Reference
 	Get Title  ==  references
 
 Can Add An Inproceedings Reference
+	Go To  ${ADDREFERENCE_URL}
 	Click  text=Konferenssijulkaisu
 	Get Title  ==  inproceedings
 	Fill Text  input[name="author"]  Aino Asiantuntija
 	Fill Text  input[name="title"]  Tärkeä konferenssi koskien kaikkia asioita
-	Fill Text  input[name="journal"]  Kaikkien asioiden konferenssi
+	Fill Text  input[name="booktitle"]  Kaikkien asioiden konferenssi
 	Fill Text  input[name="year"]  2042
 	Fill Text  input[name="editor"]  Eija Eines
 	Fill Text  input[name="volume"]  42

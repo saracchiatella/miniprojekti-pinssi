@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#pysäytetään skripti jos tietokannan luonti epäonnistuu
+#pysäyttää skriptin jos tietokannan luonti epäonnistuu
 
 set -e
 

@@ -21,7 +21,7 @@ def tables():
 def setup_db():
   """
     Creating the database
-    If database tables already exist, those are dropped before the creation
+    If database tables already exist, they are dropped before the creation
   """
   tables_in_db = tables()
   if len(tables_in_db) > 0:

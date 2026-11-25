@@ -122,10 +122,21 @@ def add_inproceedings(inproceedings_data):
 
 
 def get_references():
+    references = []
+
     sql = text("SELECT * FROM book ORDER BY id")
-
     result = db.session.execute(sql)
+    for reference in result:
+        references.append(reference)
 
-    references = result.fetchall()
+    sql = text("SELECT * FROM article ORDER BY id")
+    result = db.session.execute(sql)
+    for reference in result:
+        references.append(reference)
+
+    sql = text("SELECT * FROM inproceedings ORDER BY id")
+    result = db.session.execute(sql)
+    for reference in result:
+        references.append(reference)
 
     return references

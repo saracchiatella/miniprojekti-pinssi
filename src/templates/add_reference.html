@@ -14,4 +14,17 @@
 </button>
 </form>
 
+<form action="{{ url_for('article') }}">
+<button type="submit">
+    Artikkeli
+</button>
+</form>
+
+<form action="{{ url_for('inproceedings') }}">
+<button type="submit">
+    Konferenssijulkaisu
+</button>
+</form>
+
+
 {% endblock %}

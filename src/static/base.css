@@ -59,3 +59,25 @@ td[type="value"] {
     width: 200px;
     padding: 2px;
 }
+
+.reference-form {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    max-width: 900px;
+}
+
+.reference-form label {
+    font-weight: normal;
+}
+
+
+.reference-form input,
+.reference-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reference-form textarea {
+    resize: vertical;
+}

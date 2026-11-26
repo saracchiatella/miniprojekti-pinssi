@@ -2,121 +2,52 @@
 
 {% block content %}
 
-<h2>Lisää uusi konferenssijulkaisuviite</h2>
+<h2>Lisää uusi artikkeliviite</h2>
 
 <p>Tähdellä * merkityt kohdat ovat pakollisia.</p>
 
-<form action="{{ url_for('inproceedings') }}" method="post">
+<form action="{{ url_for('article') }}" method="post" class="reference-form">
 
-    <table>
-        <tr>
-            <td type="name">Tekijä:*</td>
-            <td type="value">
-                <input type="text" name="author" id="author" maxlength="100" required>
-            </td>
-        </tr>
+    <label for="author">Tekijä:*</label>
+    <input type="text" name="author" id="author" maxlength="100" required>
 
-        <tr>
-            <td type="name">Julkaisun nimi:*</td>
-            <td type="value">
-                <input type="text" name="title" id="title" maxlength="100" required>
-            </td>
-        </tr>
+    <label for="title">Artikkelin nimi:*</label>
+    <input type="text" name="title" id="title" maxlength="100" required>
 
-        <tr>
-            <td type="name">Konferenssijulkaisun nimi:*</td>
-            <td type="value">
-                <input type="text" name="booktitle" id="booktitle" maxlength="100" required>
-            </td>
-        </tr>
+    <label for="journal">Julkaisun nimi:*</label>
+    <input type="text" name="journal" id="journal" maxlength="100" required>
 
-        <tr>
-            <td type="name">Julkaisuvuosi:*</td>
-            <td type="value">
-                <input type="text" name="year" id="year" required>
-            </td>
-        </tr>
+    <label for="year">Julkaisuvuosi:*</label>
+    <input type="text" name="year" id="year" required>
 
-        <tr>
-            <td type="name">Toimittaja:</td>
-            <td type="value">
-                <input type="text" name="editor" id="editor" maxlength="100">
-            </td>
-        </tr>
+    <label for="volume">Osa:</label>
+    <input type="text" name="volume" id="volume" maxlength="100">
 
-        <tr>
-            <td type="name">Osa:</td>
-            <td type="value">
-                <input type="text" name="volume" id="volume" maxlength="100">
-            </td>
-        </tr>
+    <label for="number">Numero:</label>
+    <input type="text" name="number" id="number">
 
-        <tr>
-            <td type="name">Numero:</td>
-            <td type="value">
-                <input type="text" name="number" id="number">
-            </td>
-        </tr>
+    <label for="pages">Sivut:</label>
+    <input type="text" name="pages" id="pages" maxlength="100">
 
-        <tr>
-            <td type="name">Sarja:</td>
-            <td type="value">
-                <input type="text" name="series" id="series" maxlength="100">
-            </td>
-        </tr>
+    <label for="month">Kuukausi:</label>
+    <input type="text" name="month" id="month">
 
-        <tr>
-            <td type="name">Sivut:</td>
-            <td type="value">
-                <input type="text" name="pages" id="pages" maxlength="100">
-            </td>
-        </tr>
+    <label for="note">Lisätiedot:</label>
+    <textarea name="note" id="note" rows="6" maxlength="1000"></textarea>
 
-        <tr>
-            <td type="name">Kuukausi:</td>
-            <td type="value">
-                <input type="text" name="month" id="month">
-            </td>
-        </tr>
+    <label for="doi">DOI:</label>
+    <input type="text" name="doi" id="doi" maxlength="100">
 
-        <tr>
-            <td type="name">Julkaisupaikka:</td>
-            <td type="value">
-                <input type="text" name="address" id="address" maxlength="100">
-            </td>
-        </tr>
+    <label for="issn">ISSN:</label>
+    <input type="text" name="issn" id="issn">
 
-        <tr>
-            <td type="name">Organisaatio:</td>
-            <td type="value">
-                <input type="text" name="organization" id="organization" maxlength="100">
-            </td>
-        </tr>
+    <label for="zblnumber">ZBL-numero:</label>
+    <input type="text" name="zblnumber" id="zblnumber">
 
-        <tr>
-            <td type="name">Julkaisija:</td>
-            <td type="value">
-                <input type="text" name="publisher" id="publisher" maxlength="100">
-            </td>
-        </tr>
+    <label for="eprint">Eprint:</label>
+    <input type="text" name="eprint" id="eprint">
 
-        <tr>
-            <td type="name">Lisätiedot:</td>
-            <td type="value">
-                <textarea name="note" id="note" rows="6" cols="50" maxlength="1000"></textarea>
-            </td>
-        </tr>
-
-        <tr>
-            <td type="name">Annotaatio:</td>
-            <td type="value">
-                <textarea name="annote" id="annote" rows="6" cols="50" maxlength="1000"></textarea>
-            </td>
-        </tr>
-    </table>
-
-    <br>
-
+    <div></div>
     <button type="submit">
         Lisää viite
     </button>

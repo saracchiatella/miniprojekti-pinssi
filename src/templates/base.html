@@ -13,9 +13,9 @@
 
 <body>
     <nav class=nav-pad>
-        <a class="head-link" href="{{ url_for('index') }}">• Etusivu</a> &nbsp;
-        <a class="head-link" href="{{ url_for('references') }}">• Kaikki lähdeviitteet</a> &nbsp;
-        <a class="head-link" href="{{ url_for('add_reference') }}">• Uusi lähdeviite</a> &nbsp;
+        <a  href="{{ url_for('index') }}" class={% if request.endpoint == 'index' %}active{% endif %}>Etusivu</a> &nbsp;
+        <a  href="{{ url_for('references') }}" class={% if request.endpoint == 'references' %}active{% endif %}>Kaikki lähdeviitteet</a> &nbsp;
+        <a  href="{{ url_for('add_reference') }}" class={% if request.endpoint == 'add_reference' %}active{% endif %}>Uusi lähdeviite</a> &nbsp;
     </nav>
 
     <main>

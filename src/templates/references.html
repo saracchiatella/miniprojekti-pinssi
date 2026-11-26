@@ -7,117 +7,226 @@
 <p>Täällä voit tarkastella tallennettuja viitteitä.</p>
 
 {% if references %}
-    {{ references }}
-
     {% for reference in references %}
         <div class=reference_box>
-            <h3>{{ reference.title }}</h3>
-            <p>Tekijä: {{ reference.data.author }}</p>
-            <p>Vuosi: {{ reference.data.year }}</p>
-            {% if reference.type == "book" %}
-                {% if reference.data.month %}
-                    <p>Kuukausi: {{ reference.data.month }}</p>
-                {% endif %}
-                {% if reference.data.volume %}
-                    <p>Volume: {{ reference.data.volume }}</p>
-                {% endif %}
-                {% if reference.data.edition %}
-                    <p>Painos: {{ reference.data.edition }}</p>
-                {% endif %}
-                {% if reference.data.editor %}
-                    <p>Toimittaja: {{ reference.data.editor }}</p>
-                {% endif %}
-                {% if reference.data.publisher %}
-                    <p>Julkaisija: {{ reference.data.publisher }}</p>
-                {% endif %}
-                {% if reference.data.pages %}
-                    <p>Sivut: {{  reference.data.pages }}</p>
-                {% endif %}
-                {% if reference.data.number %}
-                    <p>Numero: {{ reference.data.number  }}</p>
-                {% endif %}
-                {% if reference.data.note %}
-                    <p>Lisätiedot: {{ reference.data.note }}</p>
-                {% endif %}
-                {% if reference.data.isbn %}
-                    <p>ISBN: {{ reference.data.isbn }}</p>
-                {% endif %}
-                {% if reference.data.issn %}
-                    <p>ISSN: {{ reference.data.issn }}</p>
-                {% endif %}
-                {% if reference.data.doi %}
-                    <p>doi: {{ reference.data.doi }}</p>
-                {% endif %}
-            {% elif reference.type == "article" %}
-                {% if reference.data.month %}
-                    <p>Kuukausi: {{ reference.data.month  }}</p>
-                {% endif %}
-                {% if reference.data.journal %}
-                    <p>Lehti: {{ reference.data.journal }}</p>
-                {% endif %}
-                {% if reference.data.volume %}
-                    <p>Volume: {{ reference.data.volume }}</p>
-                {% endif %}
-                {% if reference.data.number %}
-                    <p>Numero: {{ reference.data.number }}</p>
-                {% endif %}
-                {% if reference.data.pages %}
-                    <p>Sivut: {{ reference.data.pages }}</p>
-                {% endif %}
-                {% if reference.data.note %}
-                    <p>Lisätiedot: {{ reference.data.note }}</p>
-                {% endif %}
-                {% if reference.data.doi %}
-                    <p>doi: {{ reference.data.doi }}</p>
-                {% endif %}
-                {% if reference.data.issn %}
-                    <p>issn: {{ reference.data.issn }}</p>
-                {% endif %}
-                {% if reference.data.zblnumber %}
-                    <p>ZBL-tunniste: {{ reference.data.zblnumber }}</p>
-                {% endif %}
-                {% if reference.data.eprint %}
-                    <p>E-julkaisu: {{ reference.data.eprint }}</p>
-                {% endif %}
+            <table>
+                <tr>
+                    <td type="name">Otsikko:</td>
+                    <td type="value">{{ reference.data.title }}</td>
+                </tr>
+                <tr>
+                    <td type="name">Tekijä:</td>
+                    <td type="value">{{ reference.data.author }}</td>
+                </tr>
+                <tr>
+                    <td type="name">Vuosi:</td>
+                    <td type="value">{{ reference.data.year }}</td>
+                </tr>
 
-            {% elif reference.type == "inproceedings" %}
+                {% if reference.type == "book" %}
+                    {% if reference.data.month %}
+                    <tr>
+                        <td type="name">Kuukausi:</td>
+                        <td type="value">{{ reference.data.month }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if reference.data.volume %}
+                        <tr>
+                            <td type="name">Volume:</td>
+                            <td type="value">{{ reference.data.volume }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.edition %}
+                        <tr>
+                            <td type="name">Painos:</td>
+                            <td type="value">{{ reference.data.edition }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.editor %}
+                        <tr>
+                            <td type="name">Toimittaja:</td>
+                            <td type="value">{{ reference.data.editor }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.publisher %}
+                        <tr>
+                            <td type="name">Julkaisija:</td>
+                            <td type="value">{{ reference.data.publisher }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.pages %}
+                        <tr>
+                            <td type="name">Sivut:</td>
+                            <td type="value">{{  reference.data.pages }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.number %}
+                        <tr>
+                            <td type="name">Numero:</td>
+                            <td type="value">{{ reference.data.number  }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.note %}
+                        <tr>
+                            <td type="name">Lisätiedot:</td>
+                            <td type="value">{{ reference.data.note }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.isbn %}
+                        <tr>
+                            <td type="name">ISBN:</td>
+                            <td type="value">{{ reference.data.isbn }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.issn %}
+                        <tr>
+                            <td type="name">ISSN:</td>
+                            <td type="value">{{ reference.data.issn }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.doi %}
+                        <tr>
+                            <td type="name">doi: </td>
+                            <td type="value">{{ reference.data.doi }}</td>
+                        </tr>
+                    {% endif %}
+                {% elif reference.type == "article" %}
+                    {% if reference.data.month %}
+                        <tr>
+                            <td type="name">Kuukausi:</td>
+                            <td type="value">{{ reference.data.month  }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.journal %}
+                        <tr>
+                            <td type="name">Lehti:</td>
+                            <td type="value">{{ reference.data.journal }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.volume %}
+                        <tr>
+                            <td type="name">Volume:</td>
+                            <td type="value">{{ reference.data.volume }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.number %}
+                    <tr>
+                        <td type="name">Numero:</td>
+                        <td type="value">{{ reference.data.number }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if reference.data.pages %}
+                        <tr>
+                            <td type="name">Sivut:</td>
+                            <td type="value">{{ reference.data.pages }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.note %}
+                        <tr>
+                            <td type="name">Lisätiedot:</td>
+                            <td type="value">{{ reference.data.note }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.doi %}
+                        <tr>
+                            <td type="name">doi:</td>
+                            <td type="value">{{ reference.data.doi }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.issn %}
+                        <tr>
+                            <td type="name">issn:</td>
+                            <td type="value">{{ reference.data.issn }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.zblnumber %}
+                        <tr>
+                            <td type="name">ZBL-tunniste:</td>
+                            <td type="value">{{ reference.data.zblnumber }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.eprint %}
+                        <tr>
+                            <td type="name">E-julkaisu:</td>
+                            <td type="value">{{ reference.data.eprint }}</td>
+                        </tr>
+                    {% endif %}
 
-                {% if reference.data.month %}
-                    <p>Kuukausi: {{ reference.data.month }}</p>
-                {% endif %}
-                    <p>Konferenssijulkaisu: {{ reference.data.booktitle }}</p>
-                {% if reference.data.editort %}
-                    <p>Toimittaja: {{ reference.data.editor }}</p>
-                {% endif %}
-                {% if reference.data.volume %}
-                    <p>Volume: {{ reference.data.volume }}</p>
-                {% endif %}
-                {% if reference.data.number %}
-                    <p>Numero: {{ reference.data.number }}</p>
-                {% endif %}
-                {% if reference.data.series %}
-                    <p>Sarja: {{ reference.data.series }}</p>
-                {% endif %}
-                {% if reference.data.pages %}
-                    <p>Sivut: {{ reference.data.pages }}</p>
-                {% endif %}
-                {% if reference.data.address %}
-                    <p>Osoite: {{ reference.data.address }}</p>
-                {% endif %}
-                {% if reference.data.organization %}
-                    <p>Organisaatio: {{ reference.data.organization }}</p>
-                {% endif %}
-                {% if reference.data.publisher %}
-                    <p>Julkaisija: {{ reference.data.publisher }}</p>
-                {% endif %}
-                {% if reference.data.note %}
-                    <p>Lisätiedot: {{ reference.data.note }}</p>
-                {% endif %}
-                {% if reference.data.annote %}
-                    <p>Annotaatio: {{ reference.data.annote }}</p>
-                {% endif %}
+                {% elif reference.type == "inproceedings" %}
 
-            {% endif %}
+                    {% if reference.data.month %}
+                        <tr>
+                            <td type="name">Kuukausi:</td>
+                            <td type="value">{{ reference.data.month }}</td>
+                        </tr>
+                    {% endif %}
+                        <tr>
+                            <td type="name">Konferenssijulkaisu:</td>
+                            <td type="value">{{ reference.data.booktitle }}</td>
+                        </tr>
+                    {% if reference.data.editort %}
+                        <tr>
+                            <td type="name">Toimittaja:</td>
+                            <td type="value">{{ reference.data.editor }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.volume %}
+                        <tr>
+                            <td type="name">Volume:</td>
+                            <td type="value">{{ reference.data.volume }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.number %}
+                        <tr>
+                            <td type="name">Numero:</td>
+                            <td type="value">{{ reference.data.number }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.series %}
+                        <tr>
+                            <td type="name">Sarja:</td>
+                            <td type="value">{{ reference.data.series }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.pages %}
+                        <tr>
+                            <td type="name">>Sivut:</td>
+                            <td type="value">{{ reference.data.pages }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.address %}
+                        <tr>
+                            <td type="name">Osoite:</td>
+                            <td type="value">{{ reference.data.address }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.organization %}
+                        <tr>
+                            <td type="name">Organisaatio:</td>
+                            <td type="value">{{ reference.data.organization }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.publisher %}
+                        <tr>
+                            <td type="name">Julkaisija:</td>
+                            <td type="value">{{ reference.data.publisher }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.note %}
+                        <tr>
+                            <td type="name">Lisätiedot:</td>
+                            <td type="value">{{ reference.data.note }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if reference.data.annote %}
+                        <tr>
+                            <td type="name">Annotaatio:</td>
+                            <td type="value">{{ reference.data.annote }}</td>
+                        </tr>
+                    {% endif %}
+
+                {% endif %}
+            </table>
         </div>
     {% endfor %}
 

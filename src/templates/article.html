@@ -1,78 +1,107 @@
-
 {% extends "base.html" %}
 
 {% block content %}
 
 <h2>Lisää uusi artikkeliviite</h2>
 
-<p> Tähdellä * merkityt kohdat ovat pakollisia. </p>
+<p>Tähdellä * merkityt kohdat ovat pakollisia.</p>
 
 <form action="{{ url_for('article') }}" method="post">
 
-    <p>
-        <label for="author">Tekijä:*</label>
-        <input type="text" name="author" id="author" maxlength="100" required>
-    </p>
+    <table>
+        <tr>
+            <td type="name">Tekijä:*</td>
+            <td type="value">
+                <input type="text" name="author" id="author" maxlength="100" required>
+            </td>
+        </tr>
 
-    <p>
-        <label for="title">Artikkelin nimi:*</label>
-        <input type="text" name="title" id="title" maxlength="100" required>
-    </p>
+        <tr>
+            <td type="name">Artikkelin nimi:*</td>
+            <td type="value">
+                <input type="text" name="title" id="title" maxlength="100" required>
+            </td>
+        </tr>
 
-    <p>
-        <label for="journal">Julkaisun nimi:*</label>
-        <input type="text" name="journal" id="journal" maxlength="100" required>
-    </p>
+        <tr>
+            <td type="name">Julkaisun nimi:*</td>
+            <td type="value">
+                <input type="text" name="journal" id="journal" maxlength="100" required>
+            </td>
+        </tr>
 
-    <p>
-        <label for="year">Julkaisuvuosi:*</label>
-        <input type="text" name="year" id="year" required>
-    </p>
+        <tr>
+            <td type="name">Julkaisuvuosi:*</td>
+            <td type="value">
+                <input type="text" name="year" id="year" required>
+            </td>
+        </tr>
 
-    <p>
-        <label for="volume">Osa:</label>
-        <input type="text" name="volume" id="volume" maxlength="100">
-    </p>
+        <tr>
+            <td type="name">Osa:</td>
+            <td type="value">
+                <input type="text" name="volume" id="volume" maxlength="100">
+            </td>
+        </tr>
 
-    <p>
-        <label for="number">Numero:</label>
-        <input type="text" name="number" id="number">
-    </p>
+        <tr>
+            <td type="name">Numero:</td>
+            <td type="value">
+                <input type="text" name="number" id="number">
+            </td>
+        </tr>
 
-    <p>
-        <label for="pages">Sivut:</label>
-        <input type="text" name="pages" id="pages" maxlength="100">
-    </p>
+        <tr>
+            <td type="name">Sivut:</td>
+            <td type="value">
+                <input type="text" name="pages" id="pages" maxlength="100">
+            </td>
+        </tr>
 
-    <p>
-        <label for="month">Kuukausi:</label>
-        <input type="text" name="month" id="month">
-    </p>
+        <tr>
+            <td type="name">Kuukausi:</td>
+            <td type="value">
+                <input type="text" name="month" id="month">
+            </td>
+        </tr>
 
-    <p>
-        <label for="note">Lisätiedot:</label><br />
-        <textarea name="note" id="note" rows="6" cols="50" maxlength="1000"></textarea>
-    </p>
+        <tr>
+            <td type="name">Lisätiedot:</td>
+            <td type="value">
+                <textarea name="note" id="note" rows="6" cols="50" maxlength="1000"></textarea>
+            </td>
+        </tr>
 
-    <p>
-        <label for="doi">DOI:</label>
-        <input type="text" name="doi" id="doi" maxlength="100">
-    </p>
+        <tr>
+            <td type="name">DOI:</td>
+            <td type="value">
+                <input type="text" name="doi" id="doi" maxlength="100">
+            </td>
+        </tr>
 
-    <p>
-        <label for="issn">ISSN:</label>
-        <input type="text" name="issn" id="issn">
-    </p>
+        <tr>
+            <td type="name">ISSN:</td>
+            <td type="value">
+                <input type="text" name="issn" id="issn">
+            </td>
+        </tr>
 
-    <p>
-        <label for="zblnumber">ZBL number:</label>
-        <input type="text" name="zblnumber" id="zblnumber">
-    </p>
+        <tr>
+            <td type="name">ZBL-numero:</td>
+            <td type="value">
+                <input type="text" name="zblnumber" id="zblnumber">
+            </td>
+        </tr>
 
-    <p>
-        <label for="eprint">Eprint:</label>
-        <input type="text" name="eprint" id="eprint">
-    </p>
+        <tr>
+            <td type="name">Eprint:</td>
+            <td type="value">
+                <input type="text" name="eprint" id="eprint">
+            </td>
+        </tr>
+    </table>
+
+    <br>
 
     <button type="submit">
         Lisää viite

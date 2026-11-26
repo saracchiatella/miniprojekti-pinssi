@@ -10,9 +10,15 @@ main {
     flex-direction: column;
 }
 
-.head-link {
+nav a {
+    text-decoration: none;
     color: black;
     font-size: 1.2rem;
+}
+
+nav a.active {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .nav-pad {
@@ -31,4 +37,25 @@ main {
     text-align: center;
     width: 400px;
     font-size: 1.2rem;
+}
+
+table {
+    width: 300px;
+}
+
+/* Vuoroväritys taulukoille */
+/*
+tr:nth-child(even) {
+    background-color: #98BECA;
+}
+*/
+
+td[type="nimi"] {
+    width: 100px;
+    padding: 4px;
+}
+
+td[type="value"] {
+    width: 200px;
+    padding: 2px;
 }

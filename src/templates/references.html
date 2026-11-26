@@ -7,6 +7,7 @@
 <p>Täällä voit tarkastella tallennettuja viitteitä.</p>
 
 {% if references %}
+    {{ references }}
 
     {% for reference in references %}
         <div class=reference_box>
@@ -44,76 +45,76 @@
                 {% if reference.data.issn %}
                     <p>ISSN: {{ reference.data.issn }}</p>
                 {% endif %}
-                {% if reference.data.isbn %}
-                    <p>doi: {{ reference.data.isbn }}</p>
+                {% if reference.data.doi %}
+                    <p>doi: {{ reference.data.doi }}</p>
                 {% endif %}
             {% elif reference.type == "article" %}
                 {% if reference.data.month %}
-                    <p>Kuukausi: {{ reference.type.month  }}</p>
+                    <p>Kuukausi: {{ reference.data.month  }}</p>
                 {% endif %}
                 {% if reference.data.journal %}
-                    <p>Lehti: {{ reference.type.journal }}</p>
+                    <p>Lehti: {{ reference.data.journal }}</p>
                 {% endif %}
                 {% if reference.data.volume %}
-                    <p>Volume: {{ reference.type.volume }}</p>
+                    <p>Volume: {{ reference.data.volume }}</p>
                 {% endif %}
                 {% if reference.data.number %}
-                    <p>Numero: {{ reference.type.number }}</p>
+                    <p>Numero: {{ reference.data.number }}</p>
                 {% endif %}
                 {% if reference.data.pages %}
-                    <p>Sivut: {{ reference.type.pages }}</p>
+                    <p>Sivut: {{ reference.data.pages }}</p>
                 {% endif %}
                 {% if reference.data.note %}
-                    <p>Lisätiedot: {{ reference.type.note }}</p>
+                    <p>Lisätiedot: {{ reference.data.note }}</p>
                 {% endif %}
                 {% if reference.data.doi %}
-                    <p>doi: {{ reference.type.doi }}</p>
+                    <p>doi: {{ reference.data.doi }}</p>
                 {% endif %}
                 {% if reference.data.issn %}
-                    <p>issn: {{ reference.type.issn }}</p>
+                    <p>issn: {{ reference.data.issn }}</p>
                 {% endif %}
                 {% if reference.data.zblnumber %}
-                    <p>ZBL-tunniste: {{ reference.type.zblnumber }}</p>
+                    <p>ZBL-tunniste: {{ reference.data.zblnumber }}</p>
                 {% endif %}
                 {% if reference.data.eprint %}
-                    <p>E-julkaisu: {{ reference.type.eprint }}</p>
+                    <p>E-julkaisu: {{ reference.data.eprint }}</p>
                 {% endif %}
 
             {% elif reference.type == "inproceedings" %}
 
                 {% if reference.data.month %}
-                    <p>Kuukausi: {{ reference.type.month }}</p>
+                    <p>Kuukausi: {{ reference.data.month }}</p>
                 {% endif %}
-                    <p>Konferenssijulkaisu: {{ reference.type.booktitle }}</p>
+                    <p>Konferenssijulkaisu: {{ reference.data.booktitle }}</p>
                 {% if reference.data.editort %}
-                    <p>Toimittaja: {{ reference.type.editor }}</p>
+                    <p>Toimittaja: {{ reference.data.editor }}</p>
                 {% endif %}
                 {% if reference.data.volume %}
-                    <p>Volume: {{ reference.type.volume }}</p>
+                    <p>Volume: {{ reference.data.volume }}</p>
                 {% endif %}
                 {% if reference.data.number %}
-                    <p>Numero: {{ reference.type.number }}</p>
+                    <p>Numero: {{ reference.data.number }}</p>
                 {% endif %}
                 {% if reference.data.series %}
-                    <p>Sarja: {{ reference.type.series }}</p>
+                    <p>Sarja: {{ reference.data.series }}</p>
                 {% endif %}
                 {% if reference.data.pages %}
-                    <p>Sivut: {{ reference.type.pages }}</p>
+                    <p>Sivut: {{ reference.data.pages }}</p>
                 {% endif %}
                 {% if reference.data.address %}
-                    <p>Osoite: {{ reference.type.address }}</p>
+                    <p>Osoite: {{ reference.data.address }}</p>
                 {% endif %}
                 {% if reference.data.organization %}
-                    <p>Organisaatio: {{ reference.type.organization }}</p>
+                    <p>Organisaatio: {{ reference.data.organization }}</p>
                 {% endif %}
                 {% if reference.data.publisher %}
-                    <p>Julkaisija: {{ reference.type.publisher }}</p>
+                    <p>Julkaisija: {{ reference.data.publisher }}</p>
                 {% endif %}
                 {% if reference.data.note %}
-                    <p>Lisätiedot: {{ reference.type.note }}</p>
+                    <p>Lisätiedot: {{ reference.data.note }}</p>
                 {% endif %}
                 {% if reference.data.annote %}
-                    <p>Annotaatio: {{ reference.type.annote }}</p>
+                    <p>Annotaatio: {{ reference.data.annote }}</p>
                 {% endif %}
 
             {% endif %}

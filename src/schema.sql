@@ -5,6 +5,7 @@ CREATE TABLE book (
   title TEXT,
   publisher TEXT,
   year INTEGER,
+  edition TEXT,
   volume TEXT,
   number INTEGER,
   pages TEXT,

@@ -11,6 +11,7 @@ def add_book(book_data):
             title,
             publisher,
             year,
+            edition,
             volume,
             number,
             pages,
@@ -26,6 +27,7 @@ def add_book(book_data):
             :title,
             :publisher,
             :year,
+            :edition,
             :volume,
             :number,
             :pages,
@@ -127,16 +129,25 @@ def get_references():
     sql = text("SELECT * FROM book ORDER BY id")
     result = db.session.execute(sql)
     for reference in result:
-        references.append(reference)
+        references.append({
+            "type": "book",
+            "data": reference
+        })
 
     sql = text("SELECT * FROM article ORDER BY id")
     result = db.session.execute(sql)
     for reference in result:
-        references.append(reference)
+        references.append({
+            "type": "article",
+            "data": reference
+        })
 
     sql = text("SELECT * FROM inproceedings ORDER BY id")
     result = db.session.execute(sql)
     for reference in result:
-        references.append(reference)
+        references.append({
+            "type": "inproceedings",
+            "data": reference
+        })
 
     return references

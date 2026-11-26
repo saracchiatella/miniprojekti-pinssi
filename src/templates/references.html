@@ -11,18 +11,112 @@
     {% for reference in references %}
         <div class=reference_box>
             <h3>{{ reference.title }}</h3>
-            <p>Tekijä: {{ reference.author }}</p>
-            <p>Toimittaja: {{ reference.editor }}</p>
-            <p>Julkaisija: {{ reference.publisher }}</p>
-            <p>Julkaisuvuosi: {{ reference.year }}</p>
-            <p>Volume: {{ reference.volume }}</p>
-            <p>Numero: {{ reference.number }}</p>
-            <p>Sivut: {{ reference.pages }}</p>
-            <p>Kuukausi: {{ reference.month }}</p>
-            <p>Lisätiedot: {{ reference.note }}</p>
-            <p>DOI: {{ reference.doi }}</p>
-            <p>ISSN: {{ reference.issn }}</p>
-            <p>ISBN: {{ reference.isbn }}</p>
+            <p>Tekijä: {{ reference.data.author }}</p>
+            <p>Vuosi: {{ reference.data.year }}</p>
+            {% if reference.type == "book" %}
+                {% if reference.data.month %}
+                    <p>Kuukausi: {{ reference.data.month }}</p>
+                {% endif %}
+                {% if reference.data.volume %}
+                    <p>Volume: {{ reference.data.volume }}</p>
+                {% endif %}
+                {% if reference.data.edition %}
+                    <p>Painos: {{ reference.data.edition }}</p>
+                {% endif %}
+                {% if reference.data.editor %}
+                    <p>Toimittaja: {{ reference.data.editor }}</p>
+                {% endif %}
+                {% if reference.data.publisher %}
+                    <p>Julkaisija: {{ reference.data.publisher }}</p>
+                {% endif %}
+                {% if reference.data.pages %}
+                    <p>Sivut: {{  reference.data.pages }}</p>
+                {% endif %}
+                {% if reference.data.number %}
+                    <p>Numero: {{ reference.data.number  }}</p>
+                {% endif %}
+                {% if reference.data.note %}
+                    <p>Lisätiedot: {{ reference.data.note }}</p>
+                {% endif %}
+                {% if reference.data.isbn %}
+                    <p>ISBN: {{ reference.data.isbn }}</p>
+                {% endif %}
+                {% if reference.data.issn %}
+                    <p>ISSN: {{ reference.data.issn }}</p>
+                {% endif %}
+                {% if reference.data.isbn %}
+                    <p>doi: {{ reference.data.isbn }}</p>
+                {% endif %}
+            {% elif reference.type == "article" %}
+                {% if reference.data.month %}
+                    <p>Kuukausi: {{ reference.type.month  }}</p>
+                {% endif %}
+                {% if reference.data.journal %}
+                    <p>Lehti: {{ reference.type.journal }}</p>
+                {% endif %}
+                {% if reference.data.volume %}
+                    <p>Volume: {{ reference.type.volume }}</p>
+                {% endif %}
+                {% if reference.data.number %}
+                    <p>Numero: {{ reference.type.number }}</p>
+                {% endif %}
+                {% if reference.data.pages %}
+                    <p>Sivut: {{ reference.type.pages }}</p>
+                {% endif %}
+                {% if reference.data.note %}
+                    <p>Lisätiedot: {{ reference.type.note }}</p>
+                {% endif %}
+                {% if reference.data.doi %}
+                    <p>doi: {{ reference.type.doi }}</p>
+                {% endif %}
+                {% if reference.data.issn %}
+                    <p>issn: {{ reference.type.issn }}</p>
+                {% endif %}
+                {% if reference.data.zblnumber %}
+                    <p>ZBL-tunniste: {{ reference.type.zblnumber }}</p>
+                {% endif %}
+                {% if reference.data.eprint %}
+                    <p>E-julkaisu: {{ reference.type.eprint }}</p>
+                {% endif %}
+
+            {% elif reference.type == "inproceedings" %}
+
+                {% if reference.data.month %}
+                    <p>Kuukausi: {{ reference.type.month }}</p>
+                {% endif %}
+                    <p>Konferenssijulkaisu: {{ reference.type.booktitle }}</p>
+                {% if reference.data.editort %}
+                    <p>Toimittaja: {{ reference.type.editor }}</p>
+                {% endif %}
+                {% if reference.data.volume %}
+                    <p>Volume: {{ reference.type.volume }}</p>
+                {% endif %}
+                {% if reference.data.number %}
+                    <p>Numero: {{ reference.type.number }}</p>
+                {% endif %}
+                {% if reference.data.series %}
+                    <p>Sarja: {{ reference.type.series }}</p>
+                {% endif %}
+                {% if reference.data.pages %}
+                    <p>Sivut: {{ reference.type.pages }}</p>
+                {% endif %}
+                {% if reference.data.address %}
+                    <p>Osoite: {{ reference.type.address }}</p>
+                {% endif %}
+                {% if reference.data.organization %}
+                    <p>Organisaatio: {{ reference.type.organization }}</p>
+                {% endif %}
+                {% if reference.data.publisher %}
+                    <p>Julkaisija: {{ reference.type.publisher }}</p>
+                {% endif %}
+                {% if reference.data.note %}
+                    <p>Lisätiedot: {{ reference.type.note }}</p>
+                {% endif %}
+                {% if reference.data.annote %}
+                    <p>Annotaatio: {{ reference.type.annote }}</p>
+                {% endif %}
+
+            {% endif %}
         </div>
     {% endfor %}
 

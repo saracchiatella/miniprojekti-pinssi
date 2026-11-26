@@ -21,6 +21,7 @@ def book():
             "title": request.form.get("title"),
             "publisher": request.form.get("publisher"),
             "year": request.form.get("year"),
+            "edition": request.form.get("edition"),
             "volume": request.form.get("volume"),
             "number": request.form.get("number"),
             "pages": request.form.get("pages"),

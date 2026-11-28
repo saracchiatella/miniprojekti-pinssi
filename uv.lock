@@ -542,6 +542,7 @@ dependencies = [
     { name = "flask" },
     { name = "flask-sqlalchemy" },
     { name = "getenv" },
+    { name = "pytest" },
     { name = "python-dotenv" },
     { name = "requests" },
 ]
@@ -560,6 +561,7 @@ requires-dist = [
     { name = "flask", specifier = ">=3.1.2,<4.0.0" },
     { name = "flask-sqlalchemy", specifier = ">=3.1.1,<4.0.0" },
     { name = "getenv", specifier = ">=0.2.0,<0.3.0" },
+    { name = "pytest", specifier = ">=9.2.0" },
     { name = "python-dotenv", specifier = ">=1.2.1,<2.0.0" },
     { name = "requests", specifier = ">=2.32.5,<3.0.0" },
 ]

@@ -43,12 +43,9 @@ table {
     width: 300px;
 }
 
-/* Vuoroväritys taulukoille */
-/*
 tr:nth-child(even) {
     background-color: #98BECA;
 }
-*/
 
 td[type="nimi"] {
     width: 100px;
@@ -70,7 +67,6 @@ td[type="value"] {
 .reference-form label {
     font-weight: normal;
 }
-
 
 .reference-form input,
 .reference-form textarea {
